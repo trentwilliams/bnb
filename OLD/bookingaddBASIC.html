@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Make a booking</title>
+</head>
+<body>
+
+    <h1>Make a booking</h1>
+    return to the Bookings listing   Return to the main page
+
+    <h2>Booking for Test</h2>
+
+    <form method="POST" action="members.php">
+        <p>
+            <label for="room">Room (name, type, beds):</label>
+            <select id="room">
+                <option value="room1">Room 1, D, 1</option>
+                <option value="room4">Room 2, D, 2</option>
+                <option value="room2">Room 3, S, 1</option>
+                <option value="room3">Room 4, S, 2</option>
+            </select>
+        </p>
+        <p>
+            <label for="checkin">Checkin date:</label>
+            <input type="text" id="checkin" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+        </p>
+        <p>
+            <label for="checkout">Checkout date:</label>
+            <input type="text" id="checkout" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+        </p>
+
+        <p>
+            <label for="contact">Contact number:</label>
+            <input type="text" id="contact" minlength="10" maxlength="14" placeholder="(###) ### ####" pattern="\([0-9]{3}\) [0-9]{3} [0-9]{4}" required />
+        </p>
+        <p>
+            <label for="extra">Booking extras:</label>
+            <textarea id="extra" rows="5" cols="25" maxlength="1000"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Add"> cancel
+        </p>
+    </form>
+
+</body>
+</html>

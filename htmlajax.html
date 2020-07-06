@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+<script>
+    function XMLHttpMethod(searchstr = "")	{
+   var xmlhttp;    
+//step 1: check if the parameter string is empty
+   if (searchstr == "") {
+      document.getElementById("Result").innerHTML = "";
+      return;
+   }
+//step 2: setup the XMLHttpRequest object for use
+   if (window.XMLHttpRequest) {
+     xmlhttp = new XMLHttpRequest();
+
+//step 3: register an event handler for the AJAX response from the server
+     xmlhttp.onreadystatechange=function()	{
+       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+         //console.log(xmlhttp.responseText);
+	   var obj = JSON.parse(xmlhttp.responseText); //deserialise the JSON
+         var result = "Results "+obj. total_count;         
+         document.getElementById("Result").innerHTML = result;
+       }
+    }
+   }	
+//step 4: make the AJAX request
+   xmlhttp.open("GET","//api.github.com/search/repositories?q="+ searchstr ,true);
+   xmlhttp.send();
+}
+</script>
+
+  </head>
+  <body>
+    <form id=”frmSearch” method=”post”>
+      <select name="selectA" onchange="XMLHttpMethod(this.value)">
+          <option value="">Select using XMLHTTP:</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="AJAX">AJAX</option>
+          <option value="JSON">JSON</option>
+      </select>
+      <div id="Result"></div>
+    </form>
+
+
+  </body>
+</html>

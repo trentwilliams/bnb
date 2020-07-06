@@ -1,0 +1,602 @@
+[
+	{
+		"checkIn": "2020-03-28",
+		"checkOut": "2020-07-05",
+		"roomNum": 8,
+		"roomName": "Libya"
+	},
+	{
+		"checkIn": "2019-09-27",
+		"checkOut": "2020-08-03",
+		"roomNum": 3,
+		"roomName": "Equatorial Guinea"
+	},
+	{
+		"checkIn": "2020-09-19",
+		"checkOut": "2020-07-06",
+		"roomNum": 8,
+		"roomName": "Vanuatu"
+	},
+	{
+		"checkIn": "2020-05-30",
+		"checkOut": "2019-09-17",
+		"roomNum": 6,
+		"roomName": "Qatar"
+	},
+	{
+		"checkIn": "2019-09-06",
+		"checkOut": "2020-07-11",
+		"roomNum": 3,
+		"roomName": "Côte D'Ivoire (Ivory Coast)"
+	},
+	{
+		"checkIn": "2021-05-20",
+		"checkOut": "2020-04-10",
+		"roomNum": 10,
+		"roomName": "United States Minor Outlying Islands"
+	},
+	{
+		"checkIn": "2020-01-30",
+		"checkOut": "2020-03-09",
+		"roomNum": 2,
+		"roomName": "Barbados"
+	},
+	{
+		"checkIn": "2019-10-01",
+		"checkOut": "2021-04-08",
+		"roomNum": 8,
+		"roomName": "Australia"
+	},
+	{
+		"checkIn": "2020-10-23",
+		"checkOut": "2019-07-20",
+		"roomNum": 2,
+		"roomName": "Trinidad and Tobago"
+	},
+	{
+		"checkIn": "2019-08-18",
+		"checkOut": "2019-08-26",
+		"roomNum": 7,
+		"roomName": "Sierra Leone"
+	},
+	{
+		"checkIn": "2020-09-13",
+		"checkOut": "2021-01-07",
+		"roomNum": 8,
+		"roomName": "Fiji"
+	},
+	{
+		"checkIn": "2021-01-09",
+		"checkOut": "2019-11-04",
+		"roomNum": 3,
+		"roomName": "Cameroon"
+	},
+	{
+		"checkIn": "2020-07-05",
+		"checkOut": "2020-01-26",
+		"roomNum": 10,
+		"roomName": "Sri Lanka"
+	},
+	{
+		"checkIn": "2021-03-04",
+		"checkOut": "2020-01-23",
+		"roomNum": 3,
+		"roomName": "Burkina Faso"
+	},
+	{
+		"checkIn": "2021-04-03",
+		"checkOut": "2019-12-01",
+		"roomNum": 8,
+		"roomName": "Kazakhstan"
+	},
+	{
+		"checkIn": "2020-10-15",
+		"checkOut": "2019-07-03",
+		"roomNum": 2,
+		"roomName": "Svalbard and Jan Mayen Islands"
+	},
+	{
+		"checkIn": "2019-11-17",
+		"checkOut": "2020-04-13",
+		"roomNum": 5,
+		"roomName": "Jersey"
+	},
+	{
+		"checkIn": "2020-02-26",
+		"checkOut": "2019-11-24",
+		"roomNum": 5,
+		"roomName": "Korea, North"
+	},
+	{
+		"checkIn": "2019-10-14",
+		"checkOut": "2021-01-09",
+		"roomNum": 4,
+		"roomName": "Lesotho"
+	},
+	{
+		"checkIn": "2019-10-18",
+		"checkOut": "2020-03-16",
+		"roomNum": 5,
+		"roomName": "Bonaire, Sint Eustatius and Saba"
+	},
+	{
+		"checkIn": "2021-05-29",
+		"checkOut": "2020-02-20",
+		"roomNum": 1,
+		"roomName": "Algeria"
+	},
+	{
+		"checkIn": "2019-09-11",
+		"checkOut": "2021-06-02",
+		"roomNum": 9,
+		"roomName": "Czech Republic"
+	},
+	{
+		"checkIn": "2019-10-04",
+		"checkOut": "2020-02-10",
+		"roomNum": 1,
+		"roomName": "Australia"
+	},
+	{
+		"checkIn": "2020-08-29",
+		"checkOut": "2019-08-27",
+		"roomNum": 1,
+		"roomName": "Guinea-Bissau"
+	},
+	{
+		"checkIn": "2019-12-28",
+		"checkOut": "2019-07-21",
+		"roomNum": 2,
+		"roomName": "New Zealand"
+	},
+	{
+		"checkIn": "2020-09-27",
+		"checkOut": "2021-02-21",
+		"roomNum": 7,
+		"roomName": "Madagascar"
+	},
+	{
+		"checkIn": "2021-03-21",
+		"checkOut": "2020-10-20",
+		"roomNum": 9,
+		"roomName": "Czech Republic"
+	},
+	{
+		"checkIn": "2021-01-30",
+		"checkOut": "2019-09-15",
+		"roomNum": 8,
+		"roomName": "Palestine, State of"
+	},
+	{
+		"checkIn": "2021-04-24",
+		"checkOut": "2020-06-04",
+		"roomNum": 10,
+		"roomName": "Russian Federation"
+	},
+	{
+		"checkIn": "2020-07-28",
+		"checkOut": "2021-03-16",
+		"roomNum": 6,
+		"roomName": "Luxembourg"
+	},
+	{
+		"checkIn": "2020-01-27",
+		"checkOut": "2019-07-23",
+		"roomNum": 7,
+		"roomName": "Cambodia"
+	},
+	{
+		"checkIn": "2020-03-06",
+		"checkOut": "2019-08-01",
+		"roomNum": 1,
+		"roomName": "Gabon"
+	},
+	{
+		"checkIn": "2020-08-21",
+		"checkOut": "2020-11-11",
+		"roomNum": 10,
+		"roomName": "Estonia"
+	},
+	{
+		"checkIn": "2020-01-12",
+		"checkOut": "2021-02-23",
+		"roomNum": 3,
+		"roomName": "Papua New Guinea"
+	},
+	{
+		"checkIn": "2020-03-06",
+		"checkOut": "2021-05-08",
+		"roomNum": 2,
+		"roomName": "Bahamas"
+	},
+	{
+		"checkIn": "2019-07-11",
+		"checkOut": "2021-06-12",
+		"roomNum": 1,
+		"roomName": "Zimbabwe"
+	},
+	{
+		"checkIn": "2020-01-19",
+		"checkOut": "2020-08-07",
+		"roomNum": 4,
+		"roomName": "Kuwait"
+	},
+	{
+		"checkIn": "2021-03-26",
+		"checkOut": "2020-07-25",
+		"roomNum": 6,
+		"roomName": "Micronesia"
+	},
+	{
+		"checkIn": "2019-11-19",
+		"checkOut": "2020-08-03",
+		"roomNum": 2,
+		"roomName": "Honduras"
+	},
+	{
+		"checkIn": "2020-03-23",
+		"checkOut": "2019-10-11",
+		"roomNum": 10,
+		"roomName": "Austria"
+	},
+	{
+		"checkIn": "2019-12-19",
+		"checkOut": "2019-12-26",
+		"roomNum": 5,
+		"roomName": "Curaçao"
+	},
+	{
+		"checkIn": "2021-03-08",
+		"checkOut": "2020-10-15",
+		"roomNum": 8,
+		"roomName": "Morocco"
+	},
+	{
+		"checkIn": "2019-10-27",
+		"checkOut": "2019-09-10",
+		"roomNum": 3,
+		"roomName": "Kazakhstan"
+	},
+	{
+		"checkIn": "2019-07-05",
+		"checkOut": "2019-07-04",
+		"roomNum": 7,
+		"roomName": "Somalia"
+	},
+	{
+		"checkIn": "2020-08-21",
+		"checkOut": "2020-06-18",
+		"roomNum": 10,
+		"roomName": "Switzerland"
+	},
+	{
+		"checkIn": "2020-05-30",
+		"checkOut": "2019-06-24",
+		"roomNum": 6,
+		"roomName": "Cambodia"
+	},
+	{
+		"checkIn": "2021-01-30",
+		"checkOut": "2020-12-20",
+		"roomNum": 10,
+		"roomName": "British Indian Ocean Territory"
+	},
+	{
+		"checkIn": "2021-02-22",
+		"checkOut": "2019-11-03",
+		"roomNum": 6,
+		"roomName": "Algeria"
+	},
+	{
+		"checkIn": "2020-04-15",
+		"checkOut": "2020-05-11",
+		"roomNum": 3,
+		"roomName": "Antigua and Barbuda"
+	},
+	{
+		"checkIn": "2020-05-30",
+		"checkOut": "2020-09-18",
+		"roomNum": 9,
+		"roomName": "Bosnia and Herzegovina"
+	},
+	{
+		"checkIn": "2019-10-12",
+		"checkOut": "2020-09-11",
+		"roomNum": 10,
+		"roomName": "Czech Republic"
+	},
+	{
+		"checkIn": "2021-05-03",
+		"checkOut": "2020-07-19",
+		"roomNum": 3,
+		"roomName": "Montenegro"
+	},
+	{
+		"checkIn": "2021-06-09",
+		"checkOut": "2021-02-15",
+		"roomNum": 3,
+		"roomName": "Cuba"
+	},
+	{
+		"checkIn": "2020-05-28",
+		"checkOut": "2020-07-23",
+		"roomNum": 7,
+		"roomName": "Haiti"
+	},
+	{
+		"checkIn": "2020-03-21",
+		"checkOut": "2020-12-29",
+		"roomNum": 7,
+		"roomName": "Saint Martin"
+	},
+	{
+		"checkIn": "2020-06-18",
+		"checkOut": "2020-10-29",
+		"roomNum": 5,
+		"roomName": "Sri Lanka"
+	},
+	{
+		"checkIn": "2020-05-28",
+		"checkOut": "2019-11-05",
+		"roomNum": 9,
+		"roomName": "United States"
+	},
+	{
+		"checkIn": "2020-01-26",
+		"checkOut": "2020-11-28",
+		"roomNum": 8,
+		"roomName": "Cocos (Keeling) Islands"
+	},
+	{
+		"checkIn": "2020-12-03",
+		"checkOut": "2019-09-23",
+		"roomNum": 10,
+		"roomName": "United Kingdom (Great Britain)"
+	},
+	{
+		"checkIn": "2020-04-26",
+		"checkOut": "2021-05-17",
+		"roomNum": 4,
+		"roomName": "Qatar"
+	},
+	{
+		"checkIn": "2020-08-12",
+		"checkOut": "2021-02-14",
+		"roomNum": 3,
+		"roomName": "Qatar"
+	},
+	{
+		"checkIn": "2020-03-03",
+		"checkOut": "2021-05-18",
+		"roomNum": 3,
+		"roomName": "Dominican Republic"
+	},
+	{
+		"checkIn": "2019-08-08",
+		"checkOut": "2021-04-26",
+		"roomNum": 9,
+		"roomName": "Solomon Islands"
+	},
+	{
+		"checkIn": "2019-10-10",
+		"checkOut": "2021-03-13",
+		"roomNum": 8,
+		"roomName": "Zambia"
+	},
+	{
+		"checkIn": "2020-12-05",
+		"checkOut": "2021-02-20",
+		"roomNum": 6,
+		"roomName": "Isle of Man"
+	},
+	{
+		"checkIn": "2019-12-28",
+		"checkOut": "2020-12-28",
+		"roomNum": 4,
+		"roomName": "Kazakhstan"
+	},
+	{
+		"checkIn": "2020-03-19",
+		"checkOut": "2020-03-16",
+		"roomNum": 5,
+		"roomName": "Serbia"
+	},
+	{
+		"checkIn": "2020-05-04",
+		"checkOut": "2020-12-18",
+		"roomNum": 1,
+		"roomName": "Mexico"
+	},
+	{
+		"checkIn": "2020-04-28",
+		"checkOut": "2020-06-05",
+		"roomNum": 10,
+		"roomName": "Korea, South"
+	},
+	{
+		"checkIn": "2020-12-24",
+		"checkOut": "2019-08-06",
+		"roomNum": 7,
+		"roomName": "Viet Nam"
+	},
+	{
+		"checkIn": "2021-06-07",
+		"checkOut": "2020-01-03",
+		"roomNum": 2,
+		"roomName": "Wallis and Futuna"
+	},
+	{
+		"checkIn": "2019-11-22",
+		"checkOut": "2020-07-08",
+		"roomNum": 5,
+		"roomName": "Ireland"
+	},
+	{
+		"checkIn": "2019-08-24",
+		"checkOut": "2021-02-22",
+		"roomNum": 3,
+		"roomName": "British Indian Ocean Territory"
+	},
+	{
+		"checkIn": "2020-12-10",
+		"checkOut": "2021-03-13",
+		"roomNum": 4,
+		"roomName": "Burkina Faso"
+	},
+	{
+		"checkIn": "2021-03-20",
+		"checkOut": "2020-01-26",
+		"roomNum": 9,
+		"roomName": "Honduras"
+	},
+	{
+		"checkIn": "2020-05-28",
+		"checkOut": "2020-11-09",
+		"roomNum": 9,
+		"roomName": "Puerto Rico"
+	},
+	{
+		"checkIn": "2019-12-01",
+		"checkOut": "2019-10-21",
+		"roomNum": 4,
+		"roomName": "Suriname"
+	},
+	{
+		"checkIn": "2020-03-23",
+		"checkOut": "2021-05-16",
+		"roomNum": 8,
+		"roomName": "Romania"
+	},
+	{
+		"checkIn": "2019-08-17",
+		"checkOut": "2019-11-27",
+		"roomNum": 2,
+		"roomName": "Sudan"
+	},
+	{
+		"checkIn": "2020-09-11",
+		"checkOut": "2021-04-13",
+		"roomNum": 2,
+		"roomName": "Niger"
+	},
+	{
+		"checkIn": "2021-04-25",
+		"checkOut": "2020-06-04",
+		"roomNum": 9,
+		"roomName": "Ukraine"
+	},
+	{
+		"checkIn": "2021-03-01",
+		"checkOut": "2019-09-05",
+		"roomNum": 10,
+		"roomName": "Eritrea"
+	},
+	{
+		"checkIn": "2019-08-05",
+		"checkOut": "2019-11-11",
+		"roomNum": 8,
+		"roomName": "Mauritius"
+	},
+	{
+		"checkIn": "2021-04-22",
+		"checkOut": "2020-01-18",
+		"roomNum": 5,
+		"roomName": "Norfolk Island"
+	},
+	{
+		"checkIn": "2021-04-17",
+		"checkOut": "2020-10-09",
+		"roomNum": 5,
+		"roomName": "Denmark"
+	},
+	{
+		"checkIn": "2020-04-02",
+		"checkOut": "2019-12-05",
+		"roomNum": 2,
+		"roomName": "Finland"
+	},
+	{
+		"checkIn": "2019-09-06",
+		"checkOut": "2020-05-06",
+		"roomNum": 5,
+		"roomName": "Niger"
+	},
+	{
+		"checkIn": "2019-12-22",
+		"checkOut": "2020-11-21",
+		"roomNum": 5,
+		"roomName": "Jamaica"
+	},
+	{
+		"checkIn": "2021-04-20",
+		"checkOut": "2020-09-05",
+		"roomNum": 9,
+		"roomName": "Isle of Man"
+	},
+	{
+		"checkIn": "2020-05-29",
+		"checkOut": "2019-12-20",
+		"roomNum": 8,
+		"roomName": "Belgium"
+	},
+	{
+		"checkIn": "2020-07-19",
+		"checkOut": "2020-12-28",
+		"roomNum": 6,
+		"roomName": "Guam"
+	},
+	{
+		"checkIn": "2019-12-23",
+		"checkOut": "2020-12-08",
+		"roomNum": 10,
+		"roomName": "Armenia"
+	},
+	{
+		"checkIn": "2019-09-29",
+		"checkOut": "2019-08-12",
+		"roomNum": 2,
+		"roomName": "Madagascar"
+	},
+	{
+		"checkIn": "2021-05-21",
+		"checkOut": "2019-07-11",
+		"roomNum": 7,
+		"roomName": "Congo (Brazzaville)"
+	},
+	{
+		"checkIn": "2021-05-23",
+		"checkOut": "2019-06-30",
+		"roomNum": 8,
+		"roomName": "Holy See (Vatican City State)"
+	},
+	{
+		"checkIn": "2021-06-04",
+		"checkOut": "2020-09-11",
+		"roomNum": 8,
+		"roomName": "Angola"
+	},
+	{
+		"checkIn": "2019-11-10",
+		"checkOut": "2021-02-12",
+		"roomNum": 8,
+		"roomName": "Denmark"
+	},
+	{
+		"checkIn": "2021-03-04",
+		"checkOut": "2020-01-05",
+		"roomNum": 1,
+		"roomName": "Chile"
+	},
+	{
+		"checkIn": "2020-07-07",
+		"checkOut": "2020-12-02",
+		"roomNum": 6,
+		"roomName": "Burundi"
+	},
+	{
+		"checkIn": "2021-05-03",
+		"checkOut": "2021-03-02",
+		"roomNum": 7,
+		"roomName": "Morocco"
+	}
+]
