@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -7,8 +7,8 @@
 <h1>asdfaaaOngaonga B & B</h1>
 <h2>Assessment case study web applicaiton temporary launch page</h2>
 <ul>
-<li><a href="bookingadd.html">Make a booking</a>
-<li><a href="bookingviewcurrent.html">View current bookings</a>
+<li><a href="bookingadd.php">Make a booking</a>
+<li><a href="bookingviewcurrent.php">View current bookings</a>
 <li><a href="bookingedit.html">Edit a booking</a>
 <li><a href="bookingdetail.html">View booking details</a>
 <li><a href="bookingdeleteconfirm.html">Cancel a booking</a>

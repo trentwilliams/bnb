@@ -1,10 +1,10 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Make a booking</title>
 
 
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
     <script src="//code.jquery.com/jquery-1.12.4.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
@@ -101,29 +101,67 @@
 
 
 
+
     </script>
 </head>
 <body>
 
-    <h1>aaaMake a booking</h1>
-    <a href="bookingviewcurrent.html">Return to the booking listing</a>      <a href="index.html">Return to the main page</a>
+    <?php
+
+    //**********************************
+    //THIS CREATES THE DB CONNECTION
+    //**********************************
+    include "config.php"; //load in any variables
+    $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
+
+
+
+
+    ?>
+
+
+
+
+    <h1>Make a booking</h1>
+    <a href="bookingviewcurrent.html">Return to the booking listing</a>
+    <a href="index.html">Return to the main page</a>
 
     <h2>New booking for Trent Williams</h2>
+
+
+    <div id="result"></div>
 
     <form method="POST" action="bookingdone.html">
         <p>
             <label for="room">Room (name, type, beds):</label>
             <select id="room">
-                <option value="room1">Room 1, D, 1</option>
-                <option value="room4">Room 2, D, 2</option>
-                <option value="room2">Room 3, S, 1</option>
-                <option value="room3">Room 4, S, 2</option>
+
+                <?php
+
+                //prepare a query and send it to the server
+                $query = "SELECT roomID, roomname, roomtype, beds  FROM bnb.room";
+                $result = mysqli_query($DBC,$query);
+
+                //check result for data
+                if (mysqli_num_rows($result) > 0) {
+                    //loop through results
+                    echo "Record count: ".mysqli_num_rows($result).PHP_EOL;
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<option value='" . $row['roomID'] . "'>" . $row['roomname'] . ", " . $row['roomtype'] .", " .$row['beds'] . "</option>";
+                    }
+                }
+
+
+                mysqli_free_result($result);
+                ?>
+
             </select>
         </p>
         <p>
             <label for="checkin">Checkin date:</label>
             <input type="text" id="checkin" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
         </p>
+
         <p>
             <label for="checkout">Checkout date:</label>
             <input type="text" id="checkout" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
@@ -138,27 +176,29 @@
             <textarea id="extra" rows="5" cols="25" maxlength="1000"></textarea>
         </p>
         <p>
-            <input type="submit" value="Add">  <a href="index.html">cancel</a>
+            <input type="submit" value="Add" />
+            <a href="index.html">cancel</a>
         </p>
     </form>
     <hr />
 
-        <p>
-            <label for="search_from">Search from:</label>
-            <input type="text" id="search_from" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-        </p>
-        <p>
-            <label for="search_to">Search to:</label>
-            <input type="text" id="search_to" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-        </p>
-        <p>
+    <p>
+        <label for="search_from">Search from:</label>
+        <input type="text" id="search_from" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+    </p>
+    <p>
+        <label for="search_to">Search to:</label>
+        <input type="text" id="search_to" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+    </p>
+    <p>
 
-            <button id="search">search</button> <a href="index.html">cancel</a>
+        <button id="search">search</button>
+        <a href="index.html">cancel</a>
 
 
-        </p>
+    </p>
 
-    <div id="result"></div>
+
 
 
 </body>
