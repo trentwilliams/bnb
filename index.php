@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    </head>
+<body>
 <h1>asdfaaaOngaonga B & B</h1>
 <h2>Assessment case study web applicaiton temporary launch page</h2>
 <ul>
