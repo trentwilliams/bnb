@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Confirm booking delete</title>
@@ -6,7 +6,7 @@
 <body>
 
     <h1>Confirm booking delete</h1>
-    return to the Bookings listing      <a href="index.html">Return to the main page</a>
+    <a href="bookingviewcurrent.php">Return to the booking listing</a>       <a href="index.php">Return to the main page</a>
 
     <h2>Please confirm you wish to delete this booking for Trent Williams</h2>
 

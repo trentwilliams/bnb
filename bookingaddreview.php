@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Booking add review</title>
@@ -6,7 +6,7 @@
 <body>
 
     <h1>Booking add review</h1>
-    <a href="bookingviewcurrent.html">Return to the booking listing</a>      <a href="index.html">Return to the main page</a>
+    <a href="bookingviewcurrent.php">Return to the booking listing</a>      <a href="index.php">Return to the main page</a>
 
     <h2>Add a review to your booking</h2>
 
@@ -30,13 +30,13 @@
             <label for="extra">Booking extras:</label><br />
             I request everything extra!  :)
         </p>
-    <form method="POST" action="bookingdone.html">
+    <form method="POST" action="bookingaddreview.php">
              <p>
             <label for="review">Booking review:</label>
             <textarea id="review" rows="5" cols="25" maxlength="1000"></textarea>
         </p>
         <p>
-            <input type="submit" value="Add"> <a href="index.html">cancel</a>
+            <input type="submit" value="Add"> <a href="index.php">cancel</a>
         </p>
     </form>
 </body>

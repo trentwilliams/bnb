@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Ongaonga B & B</title>
@@ -7,7 +7,7 @@
 
     <h1>Thank you</h1>
 
-    <a href="bookingviewcurrent.html">Return to the booking listing</a>      <a href="index.html">Return to the main page</a>
+    <a href="bookingviewcurrent.php">Return to the booking listing</a>      <a href="index.php">Return to the main page</a>
 
     
     <p>THank you for your request</p>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Edit a booking</title>
@@ -106,11 +106,11 @@
 <body>
 
     <h1>Edit booking</h1>
-    <a href="bookingviewcurrent.html"></a>return to the Bookings listing</a>      <a href="index.html">Return to the main page</a>
+    <a href="bookingviewcurrent.php"></a>return to the Bookings listing</a>      <a href="index.php">Return to the main page</a>
 
     <h2>Edit the booking for Trent Williams</h2>
 
-    <form method="POST" action="bookingdone.html">
+    <form method="POST" action="bookingedit.php">
         <p>
             <label for="room">Room (name, type, beds):</label>
             <select id="room">

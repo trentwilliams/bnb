@@ -5,7 +5,7 @@
 </head>
 <body>
         <h1>Privacy Policy</h1>
-    <a href="bookingadd.html">Make a booking</a>      <a href="index.html">Return to the main page</a>
+    <a href="bookingadd.php">Make a booking</a>      <a href="index.php">Return to the main page</a>
 
 
 
