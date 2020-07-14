@@ -11,10 +11,7 @@
 <ul>
 <li><a href="bookingadd.php">Make a booking</a>
 <li><a href="bookingviewcurrent.php">View current bookings</a>
-<li><a href="bookingedit.php">Edit a booking</a>
-<li><a href="bookingdetail.php">View booking details</a>
-<li><a href="bookingdeleteconfirm.php">Cancel a booking</a>
-<li><a href="bookingaddreview.php">Add a review</a>
+
 </ul>
 <p>Note: Edit a booking looks like how it was wanted, however I would use the same form for both add and edit, and it would recognise it was an edit if it were passed as ID</p>
 <h2>Other</h2>

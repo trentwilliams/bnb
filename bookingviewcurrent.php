@@ -7,16 +7,11 @@
 
 
     <?php
-
     //**********************************
     //THIS CREATES THE DB CONNECTION -used in post and load, so initaite on page load no matter what
     //**********************************
     include "config.php"; //load in any variables
     $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
-
-
-
-
     ?>
 
     <h1>Current bookings</h1>

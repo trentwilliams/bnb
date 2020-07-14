@@ -68,7 +68,8 @@
 
             //create the http xml object and url
             var xmlhttp = new XMLHttpRequest();
-            var url = "data/bookings.json?ci=" + searchStart + "&co=" + searchEnd;
+            //var url = "data/bookings.json?ci=" + searchStart + "&co=" + searchEnd;
+            var url = "data/bookingsearch.php?ci=" + searchStart + "&co=" + searchEnd;
 
             //request
             xmlhttp.open("GET", url, true);
@@ -78,6 +79,7 @@
             xmlhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var myArr = JSON.parse(this.responseText);
+                    console.log(this.responseText);
                     outPut(myArr);
                 }
             };
@@ -87,12 +89,14 @@
         }
         //loop though array creating the outpuut string
         function outPut(arr) {
-            var out = ""
+            var out = "<select>";
             var i;
             for (i = 0; i < arr.length; i++) {
-                out += 'Checkin: "' + arr[i].checkIn + '" Checkout: "' + arr[i].checkOut + '" Room Number: "' + arr[i].roomNum + '" Room Name: "' + arr[i].roomName + '<br>';
-            }
 
+                //out += "roomId: " + arr[i].roomID + " roomName: " + arr[i].roomname + " roomType: " + arr[i].roomtype + " roomBeds: " + arr[i].beds + "<br>";
+                out += "<option value=" + arr[i].roomID + ">" + arr[i].roomname + ", " + arr[i].roomtype + ", " + arr[i].beds + "</option>";
+            }
+            out += "</select>";
             // update result div on page
             $("#result").html(out);
         }
@@ -138,17 +142,6 @@
         //firstname
         $error = 0; //clear our error flag
         $msg = 'Error: ';
-        //if (isset($_POST['firstname']) and !empty($_POST['firstname'])
-        //    and is_string($_POST['firstname'])) {
-        //    $fn = cleanInput($_POST['firstname']);
-        //    //check length and clip if too big
-        //    $firstname = (strlen($fn) > 50)?substr($fn,1,50):$fn;
-        //    //we would also do context checking here for contents, etc
-        //} else {
-        //    $error++; //bump the error flag
-        //    $msg .= 'Invalid firstname '; //append error message
-        //    $firstname = '';
-        //}
         //read the posted values
         $customerId=1;
         $roomId = cleanInput($_POST['room']);
@@ -157,13 +150,7 @@
         $contact = cleanInput($_POST['contact']);
         $extra= cleanInput($_POST['extra']);
         $review= "";
-        //$customerId=1;
-        //$roomId = 1;
-        //$checkin = "2002-10-10";
-        //$checkout = "2002-10-10";
-        //$contact = 1;
-        //$extra= 1;
-        //echo $error;
+
         //save the member data if the error flag is still clear
         if ($error == 0) {
             $query = "INSERT INTO bnb.booking (customerId, roomId,checkinDate,checkoutDate,contactNumber, bookingExtra,bookingReview) VALUES (?,?,?,?,?,?,?)";
@@ -200,6 +187,7 @@
     <form method="POST" action="bookingadd.php">
         <p>
             <label for="room">Room (name, type, beds):</label>
+            <div id="roomsavaliable"></div>
             <select id="room" name="room">
 
                 <?php
