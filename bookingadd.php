@@ -33,23 +33,9 @@
                 });
 
 
-            // search from selected- set the min date for the search to
-            searchFromDate = $("#search_from").datepicker()
-                .on("change", function () {
-                    searchToDate.datepicker("option", "minDate", this.value);
-                });
-
-
-            // search to selected - set the max date for the search from
-            searchToDate = $("#search_to").datepicker()
-                .on("change", function () {
-                    searchFromDate.datepicker("option", "maxDate", this.value);
-                });
-
-
             //click search - fire Ajax search
             $("#search").on("click", function () {
-                SearchAvaliable(searchFromDate.val(), searchToDate.val());
+                SearchAvaliable(checkInDate.val(), checkOutdate.val());
             });
 
 
@@ -89,16 +75,18 @@
         }
         //loop though array creating the outpuut string
         function outPut(arr) {
-            var out = "<select>";
+            var out="<label for='room'>Room (name, type, beds):</label>"
+            out += "<select id='room' name='room' required>";
+            out += "<option value=''>Select</option>";
             var i;
             for (i = 0; i < arr.length; i++) {
 
                 //out += "roomId: " + arr[i].roomID + " roomName: " + arr[i].roomname + " roomType: " + arr[i].roomtype + " roomBeds: " + arr[i].beds + "<br>";
-                out += "<option value=" + arr[i].roomID + ">" + arr[i].roomname + ", " + arr[i].roomtype + ", " + arr[i].beds + "</option>";
+                out += "<option value=" + arr[i].roomID + ">" + arr[i].roomname + ", " + arr[i].roomtype + ", " + arr[i].beds + "</option >";
             }
             out += "</select>";
             // update result div on page
-            $("#result").html(out);
+            $("#roomsavaliable").html(out);
         }
 
 
@@ -182,44 +170,33 @@
     <h2>New booking for Trent Williams</h2>
 
 
-    <div id="result"></div>
+
 
     <form method="POST" action="bookingadd.php">
-        <p>
-            <label for="room">Room (name, type, beds):</label>
-            <div id="roomsavaliable"></div>
-            <select id="room" name="room">
 
-                <?php
-
-                //prepare a query and send it to the server
-                $query = "SELECT roomID, roomname, roomtype, beds  FROM bnb.room";
-                $result = mysqli_query($DBC,$query);
-
-                //check result for data
-                if (mysqli_num_rows($result) > 0) {
-                    //loop through results
-                    echo "Record count: ".mysqli_num_rows($result).PHP_EOL;
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value='" . $row['roomID'] . "'>" . $row['roomname'] . ", " . $row['roomtype'] .", " .$row['beds'] . "</option>";
-                    }
-                }
-
-
-                mysqli_free_result($result);
-                ?>
-
-            </select>
-        </p>
-        <p>
+                <p>
             <label for="checkin">Checkin date:</label>
             <input type="text" id="checkin" name="checkin" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
         </p>
 
         <p>
             <label for="checkout">Checkout date:</label>
-            <input type="text" id="checkout" name="checkout" minlength=" 10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+            <input type="text" id="checkout" name="checkout" minlength=" 10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />  <input type="button" id="search" value="View Avaliable Rooms" />
         </p>
+            <p>
+                  <div id="result"></div>  
+        
+        
+
+
+    </p>
+
+        <p>
+            
+            <div id="roomsavaliable"><label for="room">Select your dates and search to see avaliable rooms here</label><select required>";
+            out += "<option value=''>Select</option></select></div>
+        </p>
+
 
         <p>
             <label for="contact">Contact number:</label>
@@ -234,23 +211,7 @@
             <a href="index.html">cancel</a>
         </p>
     </form>
-    <hr />
 
-    <p>
-        <label for="search_from">Search from:</label>
-        <input type="text" id="search_from" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-    </p>
-    <p>
-        <label for="search_to">Search to:</label>
-        <input type="text" id="search_to" minlength="10" maxlength="10" placeholder="yyyy-mm-dd" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-    </p>
-    <p>
-
-        <button id="search">search</button>
-        <a href="index.html">cancel</a>
-
-
-    </p>
 
 
 

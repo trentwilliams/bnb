@@ -5,9 +5,10 @@ $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
 
 
 //read checkin and checkout from GET URL
-
-$checkin='2020-08-04';
-$checkout='2020-08-09';
+    $checkin= $_GET['ci'];
+    $checkout= $_GET['co'];
+//$checkin='2020-08-04';
+//$checkout='2020-08-09';
 //do some simple validation to check if sq contains a string
 //    //prepare a query and send it to the server using our search string as a wildcard on surname
 
