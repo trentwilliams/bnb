@@ -1,3 +1,8 @@
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -17,62 +22,46 @@
     $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    //this line is for debugging purposes so that we can see the actual POST data
-    echo "<pre>"; var_dump($_POST); echo "</pre>";
     $bid = $_GET['bid'];
+
+    //cehck it's a deleted post back
+    if(isset($_GET['del']))
+    {
     $deleted= $_GET['del'];
-    //var_dump($_GET);
+    }else
+    {$deleted=0;}
+    
+
     //function to clean input but not validate type and content
     function cleanInput($data) {
         return htmlspecialchars(stripslashes(trim($data)));
     }
 
-    //the data was sent using a form therefore we use the $_POST instead of $_GET
     //check if we are saving data first by checking if the submit button exists in the array
     if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Delete')) {
-        //if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
-
 
         if (mysqli_connect_errno()) {
             echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
             exit; //stop processing the page further
         }
 
-        //validation is done client side...
-        //validate incoming data - only the first field is done for you in this example - rest is up to you to do
-        //firstname
         $error = 0; //clear our error flag
         $msg = 'Error: ';
-        //read the posted values
 
-        //save the member data if the error flag is still clear
+
+        //delete the record
         if ($error == 0) {
             $query = "DELETE FROM bnb.booking WHERE bookingId=?";
             $stmt = mysqli_prepare($DBC,$query); //prepare the query
             mysqli_stmt_bind_param($stmt,'i',$bid);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
-            //echo "<h2>Your Review has been saved</h2>";
+            
         } else {
             echo "<h2>$msg</h2>".PHP_EOL;
         }
 
     }
-
-
-
 
 
 
@@ -151,7 +140,7 @@
     <form method="POST" action="bookingdeleteconfirm.php?bid=<?php echo $bid; ?>&del=1">
         <p>
             <input type="submit" name="submit" value="Delete" />
-            <a href="index.html">cancel</a>
+            <a href="index.php">cancel</a>
         </p>
     </form>
 

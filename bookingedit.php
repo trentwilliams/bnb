@@ -1,3 +1,8 @@
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -116,18 +121,18 @@
 
         
     //this line is for debugging purposes so that we can see the actual POST data
-    echo "<pre>"; var_dump($_POST); echo "</pre>";
+    //echo "<pre>"; var_dump($_POST); echo "</pre>";
     $bid = $_GET['bid'];
-    var_dump($_GET);
+    //var_dump($_GET);
     //function to clean input but not validate type and content
     function cleanInput($data) {
         return htmlspecialchars(stripslashes(trim($data)));
     }
 
-    //the data was sent using a form therefore we use the $_POST instead of $_GET
+
     //check if we are saving data first by checking if the submit button exists in the array
     if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Update')) {
-        //if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
+
 
 
         if (mysqli_connect_errno()) {
@@ -135,9 +140,6 @@
             exit; //stop processing the page further
         }
 
-        //validation is done client side...
-        //validate incoming data - only the first field is done for you in this example - rest is up to you to do
-        //firstname
         $error = 0; //clear our error flag
         $msg = 'Error: ';
         //read the posted values
@@ -149,7 +151,7 @@
         $extra= cleanInput($_POST['extra']);
         $review= "";
 
-        //save the member data if the error flag is still clear
+        //update the booking record
         if ($error == 0) {
             $query = "UPDATE bnb.booking SET roomId=?, checkinDate=?,checkoutDate=?,contactNumber=?, bookingExtra=?   WHERE bookingId=?";
             $stmt = mysqli_prepare($DBC,$query); //prepare the query
@@ -178,7 +180,7 @@
         if (mysqli_num_rows($result) > 0) {
             /* retrieve a row from the results
             one at a time until no rows left in the result */
-            echo "Record count: ".mysqli_num_rows($result);
+           // echo "Record count: ".mysqli_num_rows($result);
             $row = mysqli_fetch_assoc($result);
                 $roomId=$row['roomId'];
                 $checkin=$row['checkinDate'];
@@ -208,7 +210,7 @@
     <h1>Edit booking</h1>
     <a href="bookingviewcurrent.php">return to the Bookings listing</a>      <a href="index.php">Return to the main page</a>
 
-    <h2>Edit the booking for FFFFFFFFFFFFFFIIIIIIIIIIIIIIXXXXXXXXXXXXXXXTrent Williams</h2>
+    <h2>Edit the booking for Trent Williams</h2>
 
     <form method="POST" action="bookingedit.php?bid=<?php echo $bid; ?>">
         <p>
@@ -223,10 +225,8 @@
                                 //check result for data
                                 if (mysqli_num_rows($result) > 0) {
                                     //loop through results
-                                    echo "Record count: ".mysqli_num_rows($result).PHP_EOL;
+                                    //echo "Record count: ".mysqli_num_rows($result).PHP_EOL;
                                     while ($row = mysqli_fetch_array($result)) {
-
-
 
 
 

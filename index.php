@@ -1,3 +1,8 @@
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,9 +11,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 <body>
-<h1>asdfaaaOngaonga B & B</h1>
+<h1>Ongaonga B & B</h1>
 <h2>Assessment case study web applicaiton temporary launch page</h2>
 <ul>
+<li>
+ <form method="POST" action="login.php" id="form" name="form">
+    <input type="submit" name="logout" value="Logout"> 
+
+</form>
+</li>
 <li><a href="bookingadd.php">Make a booking</a>
 <li><a href="bookingviewcurrent.php">View current bookings</a>
 

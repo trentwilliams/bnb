@@ -1,3 +1,8 @@
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -43,7 +48,6 @@
 
 
         //perform ALAX request for data (as per search paramerets passed)
-        //in real this woudl only return the filtered results, in this case we are not doing any filtering, (as it woudl be done server side))
         function SearchAvaliable(searchStart, searchEnd) {
 
             // a bit of validation (shoudlnt' be needed in this example as woudl be done better)
@@ -139,7 +143,7 @@
         $extra= cleanInput($_POST['extra']);
         $review= "";
 
-        //save the member data if the error flag is still clear
+        //add the booking
         if ($error == 0) {
             $query = "INSERT INTO bnb.booking (customerId, roomId,checkinDate,checkoutDate,contactNumber, bookingExtra,bookingReview) VALUES (?,?,?,?,?,?,?)";
             $stmt = mysqli_prepare($DBC,$query); //prepare the query

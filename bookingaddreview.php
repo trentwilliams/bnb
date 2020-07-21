@@ -1,3 +1,8 @@
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -16,32 +21,16 @@
     include "config.php"; //load in any variables
     $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //this line is for debugging purposes so that we can see the actual POST data
-    echo "<pre>"; var_dump($_POST); echo "</pre>";
     $bid = $_GET['bid'];
-    var_dump($_GET);
+
     //function to clean input but not validate type and content
     function cleanInput($data) {
         return htmlspecialchars(stripslashes(trim($data)));
     }
 
-    //the data was sent using a form therefore we use the $_POST instead of $_GET
     //check if we are saving data first by checking if the submit button exists in the array
     if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Add')) {
-        //if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test
+
 
 
         if (mysqli_connect_errno()) {
@@ -49,15 +38,12 @@
             exit; //stop processing the page further
         }
 
-        //validation is done client side...
-        //validate incoming data - only the first field is done for you in this example - rest is up to you to do
-        //firstname
         $error = 0; //clear our error flag
         $msg = 'Error: ';
         //read the posted values
         $review= cleanInput($_POST['review']);
 
-        //save the member data if the error flag is still clear
+        //update booking review
         if ($error == 0) {
             $query = "UPDATE bnb.booking SET bookingReview=?   WHERE bookingId=?";
             $stmt = mysqli_prepare($DBC,$query); //prepare the query
