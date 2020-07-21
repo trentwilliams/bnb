@@ -1,4 +1,8 @@
-
+<?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
