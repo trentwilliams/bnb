@@ -8,7 +8,7 @@ function checkUser() {
        return TRUE;
     else {
        $_SESSION['URI'] = 'http://localhost'.$_SERVER['REQUEST_URI']; //save current url for redirect     
-       header('Location: /bnb/login.php', true, 303);       
+       header('Location: /login.php', true, 303);       
     }       
 }
  
@@ -38,7 +38,7 @@ function login($id,$email) {
    if ($_SESSION['loggedin'] == 0 and !empty($_SESSION['URI']))        
         $uri = $_SESSION['URI'];          
    else { 
-     $_SESSION['URI'] =  '/bnb/index.php';         
+     $_SESSION['URI'] =  '/index.php';         
      $uri = $_SESSION['URI'];           
    }  
    
@@ -55,6 +55,6 @@ function logout(){
   $_SESSION['customerid'] = -1;        
   $_SESSION['email'] = '';
   $_SESSION['URI'] = '';
-  header('Location: /bnb/login.php', true, 303);    
+  header('Location: /login.php', true, 303);    
 }
 ?>
