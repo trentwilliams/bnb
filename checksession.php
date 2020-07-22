@@ -15,7 +15,7 @@ function checkUser() {
 //just to show we are logged in
 function loginStatus() {
     
-    $debug=false;  // true to debug  false no
+    $debug=true;  // true to debug  false no
 
     if($debug)  
         {
