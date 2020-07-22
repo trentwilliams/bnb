@@ -13,7 +13,7 @@
 
           <li><a href="/">Home</a></li>
             <?php
-
+            echo $_SESSION['loggedin'];
             if ($_SESSION['loggedin']>0)
             {
             ?>
