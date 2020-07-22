@@ -280,7 +280,7 @@ loginStatus();
             <textarea id="review" rows="5" cols="25" maxlength="1000">this was a great place to stay!  :)</textarea>
         </p>-->
         <p>
-            <input name="submit" type="submit" value="Update"> cancel
+            <input name="submit" type="submit" value="Update">            <a href="index.php">cancel</a>
         </p>
     </form>
 

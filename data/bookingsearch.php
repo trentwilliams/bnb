@@ -1,8 +1,8 @@
 <?php
 //Our member search/filtering engine
 include "../config.php"; //load in any variables
-$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
-
+//$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
+    $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
 
 //read checkin and checkout from GET URL
     $checkin= $_GET['ci'];

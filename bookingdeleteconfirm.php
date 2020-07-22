@@ -140,7 +140,7 @@ loginStatus();
     <form method="POST" action="bookingdeleteconfirm.php?bid=<?php echo $bid; ?>&del=1">
         <p>
             <input type="submit" name="submit" value="Delete" />
-            <a href="index.php">cancel</a>
+            <a href="bookingviewcurrent.php">cancel</a>
         </p>
     </form>
 

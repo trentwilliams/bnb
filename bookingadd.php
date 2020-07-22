@@ -212,7 +212,7 @@ loginStatus();
         </p>
         <p>
             <input name="submit" type="submit" value="Add">
-            <a href="index.html">cancel</a>
+            <a href="index.php">cancel</a>
         </p>
     </form>
 
