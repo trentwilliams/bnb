@@ -1,11 +1,19 @@
-adsfdsa
+
 <?php
 
-echo "hello";
+$hostname=gethostname();
+
+if ($hostname=="Stradale"){
+echo "running locally";
+}else{
+echo "running azure";
+}
+
+echo "<br>hello";
 echo gethostname();
 
 ?>
-asdfdsf
+
 <!DOCTYPE html>
 <html>
 <head>
