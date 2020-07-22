@@ -1,7 +1,7 @@
 <?php
 include "checksession.php";
-//checkUser();
-//loginStatus(); 
+checkUser();
+loginStatus(); 
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -59,7 +59,7 @@ include "checksession.php";
             //create the http xml object and url
             var xmlhttp = new XMLHttpRequest();
             //var url = "data/bookings.json?ci=" + searchStart + "&co=" + searchEnd;
-            var url = "data/bookingsearch.php?ci=" + searchStart + "&co=" + searchEnd;
+            var url = "bookingsearch.php?ci=" + searchStart + "&co=" + searchEnd;
 
             //request
             xmlhttp.open("GET", url, true);
@@ -142,6 +142,26 @@ include "checksession.php";
         $contact = cleanInput($_POST['contact']);
         $extra= cleanInput($_POST['extra']);
         $review= "";
+
+
+
+        //checking data before being saved to db
+        include 'QuantumPHP.php';
+
+        QuantumPHP::$MODE = 3; //mode = 3 for Chrome and Firefox
+               
+        QuantumPHP::add("customerid:". $_SESSION['customerid']);
+        QuantumPHP::add("roomid:". $roomId);
+        QuantumPHP::add("checkin:". $checkin);
+        QuantumPHP::add("checkout:". $checkout);
+        QuantumPHP::add("contact:". $contact);
+        QuantumPHP::add("extra:". $extra);
+
+
+
+        QuantumPHP::send();
+
+
 
         //add the booking
         if ($error == 0) {

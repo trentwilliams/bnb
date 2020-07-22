@@ -6,6 +6,15 @@
 echo "<pre>";
 
 
+include 'QuantumPHP.php';
+
+QuantumPHP::$MODE = 3; //mode = 1 for Chrome and Firefox
+
+QuantumPHP::add("herer");
+QuantumPHP::send();
+
+
+
 include "config.php"; //load in any variables
 $DBC = mysqli_connect(DBHOSTNAME, DBUSER , DBPASSWORD, DBDATABASE);
 //$db_select = mysqli_select_db($DBC , DBDATABASE); 

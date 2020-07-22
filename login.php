@@ -2,6 +2,10 @@
 //this line is for debugging purposes so that we can see the actual POST data
 //echo "<pre>"; var_dump($_POST); echo "</pre>";
 
+
+
+
+
 include "checksession.php";
 loginStatus(); //show the current login status
 //echo "<pre>"; var_dump($_SESSION); echo "</pre>";
@@ -48,6 +52,9 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
       echo "<h2>$msg</h2>".PHP_EOL;
     }      
 }
+
+
+
 ?>
 <h1>Login</h1>
 <form method="POST" action="login.php">

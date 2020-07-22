@@ -8,7 +8,7 @@ $azuremode=true;
 
 
 
-
+//swiitches the db connections depending if running in test or production - can for to run db on azure 
 if ($hostname!="Stradale" || $azuremode==true)
     {
     //echo "foce to use azure mysql<BR>";

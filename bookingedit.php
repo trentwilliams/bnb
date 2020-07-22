@@ -75,6 +75,7 @@ loginStatus();
             var xmlhttp = new XMLHttpRequest();
             var url = "data/bookings.json?ci=" + searchStart + "&co=" + searchEnd;
 
+
             //request
             xmlhttp.open("GET", url, true);
             xmlhttp.send();

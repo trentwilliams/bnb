@@ -1,12 +1,19 @@
 <?php
+
+
 include "checksession.php";
 checkUser();
 loginStatus(); 
+
+
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
     <title>Current bookings</title>
+    <script src="QuantumPHP.js"></script>
 </head>
 <body>
 
@@ -36,6 +43,9 @@ loginStatus();
 
         <?php
 
+
+
+
         //prepare a query and send it to the server
         $query = "SELECT b.bookingId, b.checkinDate, b.checkoutDate, r.roomname, ";
         $query .="CONCAT( c.firstname, ' ', lastname ) AS fullname FROM booking b ";
@@ -55,6 +65,10 @@ loginStatus();
             }
         }
         mysqli_free_result($result);
+
+        
+
+        
         ?>
 
 

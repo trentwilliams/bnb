@@ -1,5 +1,6 @@
 <?php
 
+//swiitches the host url depending if running in test or production
 $hostname=gethostname();
 if($hostname!="Stradale"){
     $hosturl="https://ongaonga.azurewebsites.net/";

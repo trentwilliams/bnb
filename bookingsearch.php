@@ -1,16 +1,12 @@
 <?php
 //Our member search/filtering engine
-include "../config.php"; //load in any variables
+include "config.php"; //load in any variables
 
 
         //checking data serverside
-        include "../QuantumPHP.php";
+        include "QuantumPHP.php";
 
         QuantumPHP::$MODE = 3; //mode = 3 for Chrome and Firefox
-               
-        //QuantumPHP::add("customerid:". $_SESSION['customerid']);
-        //QuantumPHP::add("roomid:". $roomId);
-
 
 
 //$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
@@ -23,7 +19,7 @@ include "../config.php"; //load in any variables
 
     QuantumPHP::add("checkin:". $checkin);
     QuantumPHP::add("checkout:". $checkout);
-
+    QuantumPHP::send();  
 
 //do some simple validation to check if sq contains a string
 //    //prepare a query and send it to the server using our search string as a wildcard on surname
@@ -54,8 +50,10 @@ if ($rowcount > 0)
     //JSON formatting
     while ($row = mysqli_fetch_assoc($result)) {
         $mybookings[] = $row;
-    }
+        QuantumPHP::add("row:". implode(",",$row));
 
+    }
+            QuantumPHP::send();  
     //$userinfo = array();
 
     //while ($row = mysql_fetch_assoc($sql))

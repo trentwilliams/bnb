@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\data",
+    "\\frankforte",
+    "\\frankforte\\quantumphp",
+    "\\provided site",
+    "\\quantum",
+    "\\quantum\\install",
+    "\\quantum\\install\\vendor",
+    "\\quantum\\src"
   ],
-  "SelectedNode": "\\checksession.php",
   "PreviewInSolutionExplorer": false
 }
