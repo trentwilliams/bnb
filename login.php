@@ -2,8 +2,6 @@
 //this line is for debugging purposes so that we can see the actual POST data
 //echo "<pre>"; var_dump($_POST); echo "</pre>";
 
-echo phpversion(); 
-
 include "checksession.php";
 loginStatus(); //show the current login status
 //echo "<pre>"; var_dump($_SESSION); echo "</pre>";

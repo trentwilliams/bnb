@@ -1,13 +1,15 @@
 <?php
+include "config.php"; //load in any variables
 session_start();
- 
+        // echo HOSTURL;
 //function to check if the user is logged else send to the login page 
 function checkUser() {
     $_SESSION['URI'] = '';    
     if ($_SESSION['loggedin'] == 1)
        return TRUE;
     else {
-       $_SESSION['URI'] = 'http://localhost'.$_SERVER['REQUEST_URI']; //save current url for redirect     
+       // echo HOSTURL;
+       $_SESSION['URI'] = HOSTURL.$_SERVER['REQUEST_URI']; //save current url for redirect     
        header('Location: /login.php', true, 303);       
     }       
 }
@@ -15,7 +17,7 @@ function checkUser() {
 //just to show we are logged in
 function loginStatus() {
     
-    $debug=true;  // true to debug  false no
+    $debug=false;  // true to debug  false no
 
     if($debug)  
         {
