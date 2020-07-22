@@ -4,12 +4,7 @@ include "checksession.php";
 //checkUser();
 //loginStatus(); 
 
-include "header.php";
-include "menu.php";
-echo '<div id="site_content">';
-include "sidebar.php";
 
-echo '<div id="content">';
 //this line is for debugging purposes so that we can see the actual POST data
 //echo "<pre>"; var_dump($_POST); echo "</pre>";
 
@@ -53,6 +48,10 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
   //this line would be added to the registermember.php to make a password hash before storing it
   //$hash = password_hash($password); 
   //this line would be used if our user password was stored as a hashed password
+
+
+
+
            //if (password_verify($password, $row['password'])) {           
             if ($password === $row['password']) //using plaintext for demonstration only!            
               login($row['customerID'],$email);
@@ -63,7 +62,14 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
 }
 
 
+  //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //hader header header header
+  include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
 
+echo '<div id="content">';
 ?>
 <h1>Login</h1>
 <form method="POST" action="login.php">
