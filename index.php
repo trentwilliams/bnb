@@ -1,4 +1,11 @@
+adsfdsa
+<?php
 
+echo "hello";
+echo gethostname();
+
+?>
+asdfdsf
 <!DOCTYPE html>
 <html>
 <head>
