@@ -9,9 +9,6 @@ echo "running locally";
 echo "running azure";
 }
 
-echo "<br>hello";
-echo gethostname();
-
 ?>
 
 <!DOCTYPE html>
