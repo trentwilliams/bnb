@@ -1,13 +1,20 @@
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+include "checksession.php";
+//checkUser();
+loginStatus(); 
+
 //this line is for debugging purposes so that we can see the actual POST data
 //echo "<pre>"; var_dump($_POST); echo "</pre>";
 
 
 
-
-
-include "checksession.php";
-loginStatus(); //show the current login status
 //echo "<pre>"; var_dump($_SESSION); echo "</pre>";
  
 //simple logout
@@ -71,5 +78,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
    <input type="submit" name="login" value="Login">
    <input type="submit" name="logout" value="Logout">   
  </form>
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

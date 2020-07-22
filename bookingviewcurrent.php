@@ -1,5 +1,11 @@
 <?php
 
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
 
 include "checksession.php";
 checkUser();
@@ -8,17 +14,7 @@ loginStatus();
 
 
 
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Current bookings</title>
-    <script src="QuantumPHP.js"></script>
-</head>
-<body>
 
-
-    <?php
     //**********************************
     //THIS CREATES THE DB CONNECTION -used in post and load, so initaite on page load no matter what
     //**********************************
@@ -74,5 +70,7 @@ loginStatus();
 
     </table>
 
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

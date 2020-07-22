@@ -1,4 +1,12 @@
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+
 include "checksession.php";
 checkUser();
 loginStatus(); 
@@ -35,3 +43,7 @@ loginStatus();
 
 </body>
 </html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

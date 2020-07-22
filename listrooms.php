@@ -1,10 +1,18 @@
-<!DOCTYPE HTML>
-<html><head><title>Browse rooms</title> </head>
- <body>
-
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+include "checksession.php";
+checkUser();
+loginStatus(); 
+
+
 include "config.php"; //load in any variables
-$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect(DBHOSTNAME, DBUSER, DBPASSWORD, DBDATABASE);
 
 //insert DB code from here onwards
 //check if the connection was good
@@ -40,6 +48,8 @@ mysqli_free_result($result); //free any memory used by the query
 mysqli_close($DBC); //close the connection once done
 ?>
 </table>
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>
   

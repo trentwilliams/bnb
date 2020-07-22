@@ -1,14 +1,16 @@
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
 include "checksession.php";
 checkUser();
 loginStatus(); 
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Ongaonga B & B</title>
-</head>
-<body>
+
 
     <h1>Thank you</h1>
 
@@ -17,5 +19,7 @@ loginStatus();
     
     <p>THank you for your request</p>
 
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

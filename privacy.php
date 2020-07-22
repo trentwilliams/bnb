@@ -1,9 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Privacy Policy</title>
-</head>
-<body>
+<?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+?>
         <h1>Privacy Policy</h1>
     <a href="bookingadd.php">Make a booking</a>      <a href="index.php">Return to the main page</a>
 
@@ -37,6 +40,7 @@
         Ongaonga, New Zealand, 4751.
     </p>
 
-
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

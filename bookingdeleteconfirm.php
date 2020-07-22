@@ -1,16 +1,15 @@
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
 include "checksession.php";
 checkUser();
 loginStatus(); 
-?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Confirm booking delete</title>
-</head>
-<body>
 
-    <?php
     //this line is for debugging purposes so that we can see the actual POST data
     $bid = $_GET['bid'];
     //var_dump($_GET);
@@ -150,7 +149,7 @@ loginStatus();
 
 
 
-    
-
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

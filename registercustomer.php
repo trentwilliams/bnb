@@ -1,8 +1,15 @@
-<!DOCTYPE HTML>
-<html><head><title>Register new customer</title> </head>
- <body>
-
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+include "checksession.php";
+checkUser();
+loginStatus(); 
+
 //function to clean input but not validate type and content
 function cleanInput($data) {  
   return htmlspecialchars(stripslashes(trim($data)));
@@ -13,7 +20,7 @@ function cleanInput($data) {
 if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] == 'Register')) {
 //if ($_SERVER["REQUEST_METHOD"] == "POST") { //alternative simpler POST test    
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect(DBHOSTNAME, DBUSER, DBPASSWORD, DBDATABASE);
 
     if (mysqli_connect_errno()) {
         echo "Error: Unable to connect to MySQL. ".mysqli_connect_error() ;
@@ -78,6 +85,8 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
   
    <input type="submit" name="submit" value="Register">
  </form>
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>
   

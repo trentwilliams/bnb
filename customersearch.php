@@ -1,7 +1,7 @@
 <?php
 //Our customer search/filtering engine
 include "config.php"; //load in any variables
-$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
+$DBC = mysqli_connect(DBHOSTNAME, DBUSER, DBPASSWORD, DBDATABASE) or die();
 
 //do some simple validation to check if sq contains a string
 $sq = $_GET['sq'];

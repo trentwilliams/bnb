@@ -1,12 +1,15 @@
 <?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
 include "checksession.php";
 checkUser();
 loginStatus(); 
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Make a booking</title>
 
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
@@ -99,8 +102,7 @@ loginStatus();
 
 
     </script>
-</head>
-<body>
+
     <?php
 
     //**********************************
@@ -239,6 +241,7 @@ loginStatus();
 
 
 
-
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>

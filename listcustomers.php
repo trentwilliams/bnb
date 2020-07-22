@@ -1,5 +1,14 @@
-<!DOCTYPE HTML>
-<html><head><title>Browse customers with AJAX autocomplete</title>
+<?php
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+include "checksession.php";
+checkUser();
+loginStatus(); 
 <script>
 
 function searchResult(searchstr) {
@@ -52,8 +61,7 @@ function searchResult(searchstr) {
   xmlhttp.send();
 }
 </script>
-</head>
-<body>
+
 
 <h1>Customer List Search by Lastname</h1>
 <h2><a href='registercustomer.php'>[Create new Customer]</a><a href="/bnb/">[Return to main page]</a>
@@ -72,6 +80,8 @@ function searchResult(searchstr) {
 
 
 </table>
-</body>
-</html>
+<?php
+echo '</div></div>';
+require_once "footer.php";
+?>
   
