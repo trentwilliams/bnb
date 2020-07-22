@@ -1,5 +1,15 @@
 <?php
-include "config.php"; //load in any variables
+
+$hostname=gethostname();
+if($hostname!="Stradale"){
+    $hosturl="https://ongaonga.azurewebsites.net/";
+    }
+    else{
+    $hosturl="http://localhost";
+    }
+
+
+
 session_start();
         // echo HOSTURL;
 //function to check if the user is logged else send to the login page 
@@ -9,7 +19,7 @@ function checkUser() {
        return TRUE;
     else {
        // echo HOSTURL;
-       $_SESSION['URI'] = HOSTURL.$_SERVER['REQUEST_URI']; //save current url for redirect     
+       $_SESSION['URI'] = $hosturl.$_SERVER['REQUEST_URI']; //save current url for redirect     
        header('Location: /login.php', true, 303);       
     }       
 }
