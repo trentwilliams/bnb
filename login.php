@@ -33,7 +33,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
        
 //This should be done with prepared statements!!
     if ($error == 0) {
-        $query = "SELECT customerID,password FROM customer WHERE email = '$email'"; //"SELECT memberID,password FROM member WHERE username = '$username'";
+        $query = "SELECT customerID,password FROM bnb.customer WHERE email = '$email'"; //"SELECT memberID,password FROM member WHERE username = '$username'";
         $result = mysqli_query($DBC,$query);     
         if (mysqli_num_rows($result) == 1) { //found the user
             $row = mysqli_fetch_assoc($result);
