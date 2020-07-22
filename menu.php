@@ -17,7 +17,7 @@
             if ($_SESSION['loggedin']>0)
             {
             ?>
-          <li><a href='listrooms.php'>Rooms</a></li>"
+          <li><a href="listrooms.php">Rooms</a></li>
 
           <li><a href="bookingviewcurrent.php">Bookings</a></li>            
           <li><a href="registercustomer.php">Register</a></li>            
