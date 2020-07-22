@@ -59,7 +59,7 @@ function login($id,$email) {
    $_SESSION['customerid'] = $id;   
    $_SESSION['email'] = $email; 
    $_SESSION['URI'] = ''; 
-   header('Location: '.$uri, true, 303);        
+   header('Location: /index.php', true, 303);        
 }
  
 //simple logout function
