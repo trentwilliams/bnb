@@ -1,4 +1,7 @@
 <?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
 
 include "header.php";
 include "menu.php";
@@ -7,9 +10,7 @@ include "sidebar.php";
 
 echo '<div id="content">';
 
-include "checksession.php";
-checkUser();
-loginStatus(); 
+
 
 
 
