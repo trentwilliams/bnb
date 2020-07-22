@@ -2,7 +2,7 @@
 
 include "checksession.php";
 //checkUser();
-loginStatus(); 
+//loginStatus(); 
 
 include "header.php";
 include "menu.php";
@@ -78,7 +78,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
   </p> 
   
    <input type="submit" name="login" value="Login">
-   <input type="submit" name="logout" value="Logout">   
+
  </form>
 </body>
 </html>
