@@ -28,8 +28,11 @@ echo "running azure";
 
 </form>
 </li>
-<li><a href="bookingadd.php">Make a booking</a>
-<li><a href="bookingviewcurrent.php">View current bookings</a>
+<li><a href="bookingadd.php">Make a booking</a></li>
+<li><a href="bookingviewcurrent.php">View current bookings</a></li>
+    <li><a href="bookingdetail.php?bid=12">test</a></li>
+    <li><a href="testconnect.php">test</a></li>
+    
 
 </ul>
 <p>Note: Edit a booking looks like how it was wanted, however I would use the same form for both add and edit, and it would recognise it was an edit if it were passed as ID</p>

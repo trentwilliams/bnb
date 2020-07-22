@@ -1,7 +1,7 @@
 <?php
 include "checksession.php";
-checkUser();
-loginStatus(); 
+//checkUser();
+//loginStatus(); 
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -26,9 +26,9 @@ loginStatus();
     //prepare a query and send it to the server
     $query = "SELECT b.bookingId, b.checkinDate, b.checkoutDate,b.contactNumber, b.bookingExtra, b.bookingReview, ";
     $query .=" CONCAT(r.roomname, ', ' , r.roomtype, ', ' , r.beds) AS roomNameDetail, " ;
-    $query .=" CONCAT( c.firstname, ' ' , c.lastname ) AS fullname  FROM booking b " ;
-    $query .=" INNER JOIN room r ON b.roomId = r.roomID ";
-    $query .=" INNER JOIN customer c ON b.customerId=c.customerID ";
+    $query .=" CONCAT( c.firstname, ' ' , c.lastname ) AS fullname  FROM bnb.booking b " ;
+    $query .=" INNER JOIN bnb.room r ON b.roomId = r.roomID ";
+    $query .=" INNER JOIN bnb.customer c ON b.customerId=c.customerID ";
     $query .=" WHERE bookingId=". $bid;
     $query.= " LIMIT 1";
 
