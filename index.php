@@ -1,7 +1,7 @@
 <?php
 include "checksession.php";
-checkUser();
-loginStatus(); 
+//checkUser();
+//loginStatus(); 
 
 include "header.php";
 include "menu.php";

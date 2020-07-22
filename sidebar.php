@@ -8,7 +8,7 @@
           <li><a href="https://openpolytechnic.ac.nz">Open Polytechnic</a></li>
           <li><a href="https://openpolytechnic.iqualify.com/local-login">iQualify</a></li>
           <li><a href="#">no link </a></li>
-          <li><a href="/bnb/privacy.php">Privacy statement</a></li>
+          <li><a href="privacy.php">Privacy statement</a></li>
         </ul>
         <h3>Search</h3>
         <form method="post" action="#" id="search_form">
