@@ -62,7 +62,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
 }
 
 
-  //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //%%%%%%%%%%%%%%%%%%%%%%%%%%
   //hader header header header
   include "header.php";
 include "menu.php";
