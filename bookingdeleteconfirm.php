@@ -1,4 +1,7 @@
 <?php
+include "checksession.php";
+checkUser();
+loginStatus(); 
 
 include "header.php";
 include "menu.php";
@@ -6,9 +9,7 @@ echo '<div id="site_content">';
 include "sidebar.php";
 
 echo '<div id="content">';
-include "checksession.php";
-checkUser();
-loginStatus(); 
+
 
     //this line is for debugging purposes so that we can see the actual POST data
     $bid = $_GET['bid'];

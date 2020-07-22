@@ -1,4 +1,15 @@
 <?php
+
+include "checksession.php";
+//checkUser();
+loginStatus(); 
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
 //this line is for debugging purposes so that we can see the actual POST data
 //echo "<pre>"; var_dump($_POST); echo "</pre>";
 
@@ -6,8 +17,6 @@
 
 
 
-include "checksession.php";
-loginStatus(); //show the current login status
 //echo "<pre>"; var_dump($_SESSION); echo "</pre>";
  
 //simple logout

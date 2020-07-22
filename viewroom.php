@@ -1,15 +1,15 @@
 <?php
 
+include "checksession.php";
+checkUser();
+loginStatus(); 
+
 include "header.php";
 include "menu.php";
 echo '<div id="site_content">';
 include "sidebar.php";
 
 echo '<div id="content">';
-include "checksession.php";
-checkUser();
-loginStatus(); 
-
 
 include "config.php"; //load in any variables
 $DBC = mysqli_connect(DBHOSTNAME, DBUSER, DBPASSWORD, DBDATABASE);

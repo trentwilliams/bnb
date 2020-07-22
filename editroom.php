@@ -1,8 +1,17 @@
-<!DOCTYPE HTML>
-<html><head><title>Edit a room</title> </head>
- <body>
-
 <?php
+
+include "checksession.php";
+checkUser();
+loginStatus(); 
+
+include "header.php";
+include "menu.php";
+echo '<div id="site_content">';
+include "sidebar.php";
+
+echo '<div id="content">';
+
+
 include "config.php"; //load in any variables
 $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
 
@@ -96,7 +105,8 @@ if ($rowcount > 0) {
   echo "<h2>room not found with that ID</h2>"; //simple error feedback
 }
 mysqli_close($DBC); //close the connection once done
+
+echo '</div></div>';
+require_once "footer.php";
 ?>
-</body>
-</html>
   
