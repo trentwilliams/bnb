@@ -73,7 +73,7 @@ echo '<div id="content">';
 ?>
 <h1>Login</h1>
 <form method="POST" action="login.php">
-<p>email: non@et.ca <br />password: pw</p>
+
   <p>
     <label for="email">Email: </label>
     <input type="text" id="email" name="email" maxlength="32"> 
