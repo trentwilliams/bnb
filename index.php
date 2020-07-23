@@ -9,7 +9,7 @@ echo '<div id="site_content">';
 include "sidebar.php";
 
 echo '<div id="content">';
-phpinfo()
+//phpinfo()
 
 ?>
 <!DOCTYPE html>
