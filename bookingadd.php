@@ -89,7 +89,6 @@ echo '<div id="content">';
             var i;
             for (i = 0; i < arr.length; i++) {
 
-                //out += "roomId: " + arr[i].roomID + " roomName: " + arr[i].roomname + " roomType: " + arr[i].roomtype + " roomBeds: " + arr[i].beds + "<br>";
                 out += "<option value=" + arr[i].roomID + ">" + arr[i].roomname + ", " + arr[i].roomtype + ", " + arr[i].beds + "</option >";
             }
             out += "</select>";
@@ -133,8 +132,6 @@ echo '<div id="content">';
         }
 
          //validation is done client side...
-        //validate incoming data - only the first field is done for you in this example - rest is up to you to do
-        //firstname
         $error = 0; //clear our error flag
         $msg = 'Error: ';
         //read the posted values

@@ -14,9 +14,6 @@ echo '<div id="content">';
 
 
 
-
-
-
     //**********************************
     //THIS CREATES THE DB CONNECTION -used in post and load, so initaite on page load no matter what
     //**********************************

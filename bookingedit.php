@@ -67,7 +67,7 @@ echo '<div id="content">';
 
 
         //perform ALAX request for data (as per search paramerets passed)
-        //in real this woudl only return the filtered results, in this case we are not doing any filtering, (as it woudl be done server side))
+        
         function SearchAvaliable(searchStart, searchEnd) {
 
             // a bit of validation (shoudlnt' be needed in this example as woudl be done better)
@@ -243,7 +243,7 @@ echo '<div id="content">';
                                             {
                                                 $selected = '';
                                             }
-                                            //echo('<option value="'.$row['id'].' '.$selected.'">'.$row['username'].' ('.$row['fname'].' '.substr($row['lname'],0,1).'.)</option>');
+                                            
                                             echo "<option value='" . $row['roomID'] ."' ". $selected." '>" . $row['roomname'] . ", " . $row['roomtype'] .", " .$row['beds'] . "</option>";
 
 
@@ -279,10 +279,7 @@ echo '<div id="content">';
             <label for="extra">Booking extras:</label>
             <textarea id="extra" name="extra" rows="5" cols="25" maxlength="1000"><?php echo $bookingExtra; ?></textarea>
         </p>
-                     <!--<p>
-            <label for="review">Booking review:</label>
-            <textarea id="review" rows="5" cols="25" maxlength="1000">this was a great place to stay!  :)</textarea>
-        </p>-->
+
         <p>
             <input name="submit" type="submit" value="Update">            <a href="index.php">cancel</a>
         </p>
