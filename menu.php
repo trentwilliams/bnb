@@ -20,7 +20,11 @@
           <li><a href="listrooms.php">Rooms</a></li>
 
           <li><a href="bookingviewcurrent.php">Bookings</a></li>            
-          <li><a href="registercustomer.php">Register</a></li>            
+          <li><a href="registercustomer.php">Register</a></li>         
+           <li>  <form method="POST" action="login.php" id="form" name="form">
+    <input id="logoutbtn" type="submit" name="logout" value="Logout"> 
+
+</form></li>
           <?php
             }else{?>
           <li><a href="login.php">Login</a></li>

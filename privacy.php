@@ -1,5 +1,10 @@
 <?php
 
+
+include "checksession.php";
+//checkUser();
+//loginStatus(); 
+
 include "header.php";
 include "menu.php";
 echo '<div id="site_content">';
@@ -8,11 +13,7 @@ include "sidebar.php";
 echo '<div id="content">';
 ?>
         <h1>Privacy Policy</h1>
-    <a href="bookingadd.php">Make a booking</a>      <a href="index.php">Return to the main page</a>
 
-
-
-    <h2>Privacy Policy</h2>
     <p>We collect personal information from you, including information about your:</p>
     <ul>
         <li>Name</li>

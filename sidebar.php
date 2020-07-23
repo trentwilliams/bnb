@@ -5,9 +5,9 @@
         
         <h3>Useful Links</h3>
         <ul>
-          <li><a href="https://openpolytechnic.ac.nz">Open Polytechnic</a></li>
-          <li><a href="https://openpolytechnic.iqualify.com/local-login">iQualify</a></li>
-          <li><a href="#">no link </a></li>
+          <li><a href="https://shop.countdown.co.nz/shop/browse/fruit-veg/vegetables/potato-kumara?gclid=CjwKCAjwx9_4BRAHEiwApAt0zj5Tg7pM4nT2Dv-JyeBd6opzf57pnxr7KpNLlAlTMumz5cCTFObNuxoCJjoQAvD_BwE">Potatoes for sale</a></li>
+          <li><a href="https://www.boredpanda.com/happy-cats/?utm_source=google&utm_medium=organic&utm_campaign=organic">Happy Cats</a></li>
+          <li><a href="#">No Link</a></li>
           <li><a href="privacy.php">Privacy statement</a></li>
         </ul>
         <h3>Search</h3>

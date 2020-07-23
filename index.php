@@ -21,19 +21,20 @@ echo '<div id="content">';
     </head>
 <body>
 <h1>Ongaonga B & B</h1>
-<h2>Assessment case study web applicaiton temporary launch page</h2>
+<p>Welcome to Ongaonga BNB, the best BNB in the land!</p>
+<p>This is a case study website, to see the work completed please log in.</p>
+    <p>Thanks and have a nice date, Trent</p>
 <ul>
 <li>
- <form method="POST" action="login.php" id="form" name="form">
-    <input type="submit" name="logout" value="Logout"> 
 
-</form>
 </li>
 <li><a href="bookingadd.php">Make a booking</a>
 <li><a href="bookingviewcurrent.php">View current bookings</a>
 
 </ul>
-<p>Note: Edit a booking looks like how it was wanted, however I would use the same form for both add and edit, and it would recognise it was an edit if it were passed as ID</p>
+
+<p>Note: the edit booking page is designed as requested.  The add booking page has been modified, this makea it easier for a person to book only rooms avaliable for their choosen date range. Ideally only one page woudl be created and it woudl handle adds and edits.</p>
+
 <h2>Other</h2>
 <ul>
 

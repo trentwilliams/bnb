@@ -72,6 +72,7 @@ include "sidebar.php";
 echo '<div id="content">';
 ?>
 <h1>Login</h1>
+<p>The resource you are trying to access requires you to be registered.<br />To register please email Trent - <a href="mailto:trent@evolve12.com">trent@evolve12.com</a></p>
 <form method="POST" action="login.php">
 
   <p>
