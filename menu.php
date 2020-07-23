@@ -22,12 +22,13 @@
           <li><a href="bookingviewcurrent.php">Bookings</a></li>            
           <li><a href="registercustomer.php">Register</a></li>            
           <?php
-            }?>
-
-
-
-
+            }else{?>
           <li><a href="login.php">Login</a></li>
+            <?php } ?>
+
+
+
+
         </ul>
       </div>
     </div>
